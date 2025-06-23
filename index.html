@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+      <span class="font-bold text-xl text-blue-600">TuNombre</span>
+      <div class="space-x-6">
+        <a href="#sobre-mi" class="hover:text-blue-600">Sobre mí</a>
+        <a href="#proyectos" class="hover:text-blue-600">Proyectos</a>
+        <a href="#contacto" class="hover:text-blue-600">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="max-w-5xl mx-auto px-4 py-16 flex flex-col items-center text-center">
+    <img src="https://i.pravatar.cc/120?img=3" alt="Avatar" class="rounded-full w-32 h-32 mb-4 border-4 border-blue-500">
+    <h1 class="text-4xl font-bold mb-2">Hola, soy TuNombre</h1>
+    <p class="text-lg text-gray-600 mb-4">Desarrollador web | Freelancer</p>
+    <a href="#proyectos" class="bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700">Ver proyectos</a>
+  </section>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="max-w-3xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold mb-4 text-blue-600">Sobre mí</h2>
+    <p>
+      Soy un desarrollador web apasionado por crear páginas modernas y funcionales. Manejo HTML, CSS, JavaScript y frameworks como Tailwind y React.
+    </p>
+    <div class="flex gap-4 mt-6">
+      <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">HTML</span>
+      <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">CSS</span>
+      <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+      <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Tailwind</span>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="max-w-5xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold mb-4 text-blue-600">Proyectos</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Proyecto 1 -->
+      <div class="bg-white rounded-lg shadow-md p-4 flex flex-col">
+        <img src="https://source.unsplash.com/400x200/?website,code" alt="Proyecto 1" class="rounded-md mb-3">
+        <h3 class="font-bold mb-1">Landing Page Moderna</h3>
+        <p class="text-gray-600 mb-2 text-sm">Sitio web para empresa de tecnología. Diseño responsivo y animaciones suaves.</p>
+        <a href="#" class="mt-auto text-blue-600 hover:underline">Ver demo</a>
+      </div>
+      <!-- Proyecto 2 -->
+      <div class="bg-white rounded-lg shadow-md p-4 flex flex-col">
+        <img src="https://source.unsplash.com/400x200/?app,code" alt="Proyecto 2" class="rounded-md mb-3">
+        <h3 class="font-bold mb-1">Dashboard Interactivo</h3>
+        <p class="text-gray-600 mb-2 text-sm">Panel administrativo para gestión de datos con gráficos y filtros.</p>
+        <a href="#" class="mt-auto text-blue-600 hover:underline">Ver demo</a>
+      </div>
+      <!-- Proyecto 3 -->
+      <div class="bg-white rounded-lg shadow-md p-4 flex flex-col">
+        <img src="https://source.unsplash.com/400x200/?portfolio,code" alt="Proyecto 3" class="rounded-md mb-3">
+        <h3 class="font-bold mb-1">Mi Portafolio</h3>
+        <p class="text-gray-600 mb-2 text-sm">Sitio personal para mostrar mis trabajos, CV y contacto.</p>
+        <a href="#" class="mt-auto text-blue-600 hover:underline">Ver demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="max-w-3xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold mb-4 text-blue-600">Contacto</h2>
+    <form class="flex flex-col gap-4">
+      <input type="text" placeholder="Tu nombre" class="p-2 border rounded-md" required>
+      <input type="email" placeholder="Tu correo" class="p-2 border rounded-md" required>
+      <textarea placeholder="Mensaje" class="p-2 border rounded-md" required></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Enviar</button>
+    </form>
+    <div class="mt-6 text-gray-700">
+      <p>O escríbeme a: <a href="mailto:correo@ejemplo.com" class="text-blue-600">correo@ejemplo.com</a></p>
+      <p>Redes: 
+        <a href="#" class="text-blue-600 ml-2">LinkedIn</a> | 
+        <a href="#" class="text-blue-600 ml-2">GitHub</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 text-gray-500">
+    &copy; 2025 TuNombre. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
