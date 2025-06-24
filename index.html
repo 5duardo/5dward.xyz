@@ -3,57 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio | Edu</title>
-  <!-- Favicon -->
+  <title>5dward</title>
   <link rel="icon" href="logo.jpg" type="image/png">
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-black text-gray-100">
+<body class="bg-black text-gray-100 scroll-smooth">
+
   <!-- Navbar -->
-  <nav class="fixed w-full z-50 bg-black/60 backdrop-blur-sm">
+  <nav class="fixed w-full z-50 bg-black/60 backdrop-blur-sm shadow-lg animate-fade-down motion-safe:duration-700">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold text-purple-500">Edu</a>
+      <a href="#" class="text-2xl font-bold text-purple-500 hover:scale-105 transition-transform duration-300">5dward</a>
       <div class="space-x-8 hidden md:block">
-        <a href="#sobre-mi" class="hover:text-purple-400">Sobre mí</a>
-        <a href="#proyectos" class="hover:text-purple-400">Proyectos</a>
-        <a href="#contacto" class="hover:text-purple-400">Contacto</a>
+        <a href="#sobre-mi" class="hover:text-purple-400 transition-colors duration-300">Sobre mí</a>
+        <a href="#proyectos" class="hover:text-purple-400 transition-colors duration-300">Proyectos</a>
+        <a href="#contacto" class="hover:text-purple-400 transition-colors duration-300">Contacto</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="relative flex flex-col items-center justify-center h-[70vh] bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80');">
+  <section class="relative flex flex-col items-center justify-center h-[70vh] bg-cover bg-center animate-fade-in motion-safe:duration-[1200ms]" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80');">
     <div class="absolute inset-0 bg-gradient-to-r from-purple-700/70 to-black/80"></div>
     <div class="relative text-center px-4">
-      <img src="logo.jpg" alt="Edu" class="rounded-full border-4 border-purple-500 w-40 h-40 mx-auto mb-4">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Hola, soy Edu</h1>
+      <img src="logo.jpg" alt="Edu" class="rounded-full border-4 border-purple-500 w-40 h-40 mx-auto mb-4 shadow-xl hover:scale-105 transition-transform duration-300">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-2 animate-fade-in-up motion-safe:duration-[1200ms]">Hola, soy 5dward</h1>
       <p class="text-lg md:text-xl text-gray-200 mb-6">Desarrollador & estudiante de Ingeniería en Sistemas</p>
-      <a href="#proyectos" class="inline-block bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-full font-semibold shadow-lg">Ver proyectos</a>
+      <a href="#proyectos" class="inline-block bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-full font-semibold shadow-lg transition-transform duration-300 hover:scale-105">Ver proyectos</a>
     </div>
   </section>
 
   <!-- Sobre mí -->
-  <section id="sobre-mi" class="max-w-3xl mx-auto px-6 py-16">
+  <section id="sobre-mi" class="max-w-3xl mx-auto px-6 py-16 animate-fade-in motion-safe:duration-[1000ms]">
     <h2 class="text-3xl font-bold text-purple-500 mb-6">Sobre mí</h2>
-    <p class="leading-relaxed">
-      Soy Edu, estudiante de Ingeniería en Sistemas Computacionales en UNITEC Honduras. Me apasiona construir experiencias digitales atractivas y accesibles. Trabajo con HTML, CSS, JavaScript, Tailwind y React para convertir ideas en productos reales.
+    <p class="leading-relaxed text-gray-300">
+      Soy Edu, estudiante de Ingeniería en Sistemas Computacionales en UNITEC Honduras. Me apasiona construir experiencias digitales atractivas y accesibles. Trabajo con una sola meta, convertir ideas en productos reales.
     </p>
     <div class="flex flex-wrap gap-3 mt-8">
-      <span class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">HTML</span>
+      <span class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm animate-pulse">HTML</span>
       <span class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">CSS</span>
       <span class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">JavaScript</span>
       <span class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">Tailwind</span>
-      <span class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">React</span>
+      <span class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">PHP</span>
+      <span class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">Firebase</span>
     </div>
   </section>
 
   <!-- Proyectos -->
-  <section id="proyectos" class="max-w-6xl mx-auto px-6 py-16">
+  <section id="proyectos" class="max-w-6xl mx-auto px-6 py-16 animate-fade-in-up motion-safe:duration-[1200ms]">
     <h2 class="text-3xl font-bold text-purple-500 mb-10 text-center">Proyectos</h2>
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <!-- ITEEC -->
-      <div class="group relative rounded-xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-md">
+      <div class="group relative rounded-xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-md shadow-lg hover:shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02]">
         <img src="https://static.wixstatic.com/media/7599df_a287742e99be446f99732b237cdc1bec~mv2.jpeg/v1/fit/w_2500,h_1330,al_c/7599df_a287742e99be446f99732b237cdc1bec~mv2.jpeg" alt="ITEEC" class="h-40 w-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="p-5 flex flex-col h-56">
           <h3 class="text-xl font-semibold mb-2">ITEEC</h3>
@@ -62,7 +62,7 @@
         </div>
       </div>
       <!-- Angie's Latin Food -->
-      <div class="group relative rounded-xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-md">
+      <div class="group relative rounded-xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-md shadow-lg hover:shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02]">
         <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?auto=format&fit=crop&w=800&q=80" alt="Angie's Latin Food" class="h-40 w-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="p-5 flex flex-col h-56">
           <h3 class="text-xl font-semibold mb-2">Angie's Latin Food</h3>
@@ -71,7 +71,7 @@
         </div>
       </div>
       <!-- Many's Pool & Bar -->
-      <div class="group relative rounded-xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-md">
+      <div class="group relative rounded-xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-md shadow-lg hover:shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02]">
         <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Many's Pool & Bar" class="h-40 w-full object-cover group-hover:scale-105 transition-transform duration-300">
         <div class="p-5 flex flex-col h-56">
           <h3 class="text-xl font-semibold mb-2">Many's Pool & Bar</h3>
@@ -82,9 +82,31 @@
     </div>
   </section>
 
-  <footer class="text-center py-8 text-gray-500">
-    &copy; 2025 Edu | <a href="http://5dward.xyz/" class="text-purple-400 hover:underline">5dward.xyz</a>. Todos los derechos reservados.
+  <!-- Footer -->
+  <footer class="text-center py-8 text-gray-500 animate-fade-in motion-safe:duration-[1200ms]">
+    &copy; 2025 | <a href="http://5dward.xyz/" class="text-purple-400 hover:underline">5dward.xyz</a>. Todos los derechos reservados.
   </footer>
+
+  <!-- Animaciones personalizadas -->
+  <style>
+    @layer utilities {
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fade-down {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in { animation: fade-in 1s ease-out both; }
+      .animate-fade-in-up { animation: fade-in-up 1s ease-out both; }
+      .animate-fade-down { animation: fade-down 0.7s ease-out both; }
+    }
+  </style>
+
 </body>
 </html>
-
