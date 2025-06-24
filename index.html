@@ -1,63 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>5dward</title>
+  
   <!-- Favicon con letra E morada -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' font-family='Nunito' fill='%23700fc2'>E</text></svg>">
-  <!-- Nunito font -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80' font-family='Fira Code' fill='%23700fc2'>E</text></svg>">
+
+  <!-- Fira Code font (dev style) -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/tu-kit-id.js" crossorigin="anonymous"></script>
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    body { font-family: 'Nunito', sans-serif; }
-    @layer utilities {
-      @keyframes fade-in { from { opacity:0; } to { opacity:1; } }
-      @keyframes slide-up { from { transform: translateY(30px); opacity:0; } to { transform: translateY(0); opacity:1; } }
-      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-      .animate-fade-in { animation: fade-in 1s ease-out both; }
-      .animate-slide-up { animation: slide-up 1s ease-out both; }
-      .animate-spin-slow { animation: spin 3s linear infinite; }
-    }
+    body { font-family: 'Fira Code', monospace; }
+
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slide { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes loaderSpin { to { transform: rotate(360deg); } }
+
+    .fade { animation: fade 1s ease-out forwards; }
+    .slide { animation: slide 1s ease-out forwards; }
+    .loader-icon { animation: loaderSpin 1.5s linear infinite; }
   </style>
 </head>
-<body class="bg-black text-gray-100 overflow-x-hidden">
-  <!-- Loader -->
-  <div id="loader" class="fixed inset-0 bg-black flex items-center justify-center z-50">
-    <div class="text-purple-500 text-6xl animate-spin-slow"><i class="fas fa-sync-alt"></i></div>
+<body class="bg-black text-gray-100">
+
+  <!-- Loader (siempre visible por 3 segundos) -->
+  <div id="loader" class="fixed inset-0 z-50 bg-black flex items-center justify-center">
+    <div class="text-purple-500 text-6xl loader-icon"><i class="fas fa-terminal"></i></div>
   </div>
 
   <!-- Navbar -->
-  <nav class="fixed w-full z-40 bg-black/60 backdrop-blur-sm animate-slide-up">
+  <nav class="fixed w-full z-40 bg-black/70 backdrop-blur-md fade">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-extrabold text-purple-500 hover:scale-105 transition">5dward</a>
+      <a href="#" class="text-2xl font-extrabold text-purple-500 hover:scale-105 transition-transform">5dward</a>
       <div class="space-x-6 hidden md:flex">
         <a href="#sobre-mi" class="hover:text-purple-400 transition">Sobre mí</a>
         <a href="#proyectos" class="hover:text-purple-400 transition">Proyectos</a>
-        <a href="#contacto" class="hover:text-purple-400 transition">Contacto</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
   <section id="hero" class="relative flex flex-col items-center justify-center h-screen bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1350&q=80');">
-    <div class="absolute inset-0 bg-gradient-to-r from-purple-700/70 to-black/80"></div>
-    <div class="relative text-center px-4">
-      <img src="logo.jpg" alt="Edu" class="rounded-full border-4 border-purple-500 w-40 h-40 mx-auto mb-4 shadow-xl hover:scale-105 transition animate-fade-in">
-      <h1 class="text-5xl font-extrabold mb-4 text-white animate-slide-up">Hola, soy 5dward</h1>
-      <p class="text-xl text-gray-300 mb-6 animate-fade-in delay-200">Desarrollador & estudiante de Ingeniería</p>
-      <a href="#proyectos" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition transform hover:scale-105 animate-slide-up delay-400">Ver proyectos</a>
+    <div class="absolute inset-0 bg-gradient-to-r from-purple-800/60 to-black/80"></div>
+    <div class="relative text-center px-4 slide">
+      <img src="logo.jpg" alt="Edu" class="rounded-full border-4 border-purple-500 w-40 h-40 mx-auto mb-6 shadow-xl hover:scale-105 transition duration-500">
+      <h1 class="text-5xl font-bold mb-3">Hola, soy 5dward</h1>
+      <p class="text-xl text-gray-300 mb-6">Desarrollador & estudiante de Ingeniería</p>
+      <a href="#proyectos" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-transform hover:scale-105">Ver proyectos</a>
     </div>
   </section>
 
   <!-- Sobre mí -->
-  <section id="sobre-mi" class="max-w-3xl mx-auto px-6 py-20 animate-fade-in delay-600">
+  <section id="sobre-mi" class="max-w-3xl mx-auto px-6 py-20 fade">
     <h2 class="text-4xl font-bold text-purple-500 mb-6"><i class="fas fa-user mr-2"></i>Sobre mí</h2>
     <p class="text-gray-300 leading-relaxed mb-8">
-      Soy Edu, estudiante de Ingeniería en Sistemas Computacionales en UNITEC Honduras. Me apasiona crear experiencias digitales atractivas y accesibles. Convierto ideas en productos reales.
+      Soy Edu, estudiante de Ingeniería en Sistemas Computacionales en UNITEC Honduras. Me gusta transformar ideas en soluciones reales. Uso código para crear lo que imagino.
     </p>
     <div class="flex flex-wrap gap-3">
       <span class="px-3 py-1 rounded-full bg-purple-600/20 text-purple-300 animate-pulse">HTML</span>
@@ -70,60 +75,50 @@
   </section>
 
   <!-- Proyectos -->
-  <section id="proyectos" class="max-w-6xl mx-auto px-6 py-20 animate-slide-up delay-800">
-    <h2 class="text-4xl font-bold text-purple-500 text-center mb-12"><i class="fas fa-project-diagram mr-2"></i>Proyectos</h2>
+  <section id="proyectos" class="max-w-6xl mx-auto px-6 py-20 slide">
+    <h2 class="text-4xl font-bold text-purple-500 text-center mb-12"><i class="fas fa-code mr-2"></i>Proyectos</h2>
     <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- Tarjetas -->
-      <div class="group relative bg-white/5 border border-white/10 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition animate-fade-in delay-200">
+      <div class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
         <img src="https://static.wixstatic.com/media/7599df_a287742e99be446f99732b237cdc1bec~mv2.jpeg" alt="ITEEC" class="h-40 w-full object-cover group-hover:scale-110 transition duration-300">
-        <div class="p-5 flex flex-col h-56">
+        <div class="p-5">
           <h3 class="text-2xl font-semibold mb-2">ITEEC</h3>
-          <p class="text-gray-300 flex-1">Sitio institucional del Instituto Técnico en Electricidad, Electrónica y Computación.</p>
-          <a href="https://iteec.edu.hn/" class="mt-4 text-purple-400 hover:underline"><i class="fas fa-external-link-alt mr-1"></i>Visitar sitio</a>
+          <p class="text-gray-300">Sitio institucional del Instituto Técnico en Electricidad, Electrónica y Computación.</p>
+          <a href="https://iteec.edu.hn/" class="mt-4 inline-block text-purple-400 hover:underline"><i class="fas fa-external-link-alt mr-1"></i>Visitar sitio</a>
         </div>
       </div>
-      <div class="group relative bg-white/5 border border-white/10 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition animate-fade-in delay-400">
+      <div class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
         <img src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?auto=format&fit=crop&w=800&q=80" alt="Angie's Latin Food" class="h-40 w-full object-cover group-hover:scale-110 transition duration-300">
-        <div class="p-5 flex flex-col h-56">
+        <div class="p-5">
           <h3 class="text-2xl font-semibold mb-2">Angie's Latin Food</h3>
-          <p class="text-gray-300 flex-1">Página para restaurante latino en Colorado Springs, USA.</p>
-          <a href="https://www.angieslatinfood.com/" class="mt-4 text-purple-400 hover:underline"><i class="fas fa-external-link-alt mr-1"></i>Visitar sitio</a>
+          <p class="text-gray-300">Restaurante latino en Colorado Springs, USA.</p>
+          <a href="https://www.angieslatinfood.com/" class="mt-4 inline-block text-purple-400 hover:underline"><i class="fas fa-external-link-alt mr-1"></i>Visitar sitio</a>
         </div>
       </div>
-      <div class="group relative bg-white/5 border border-white/10 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition animate-fade-in delay-600">
+      <div class="group bg-white/5 border border-white/10 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition">
         <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Many's Pool & Bar" class="h-40 w-full object-cover group-hover:scale-110 transition duration-300">
-        <div class="p-5 flex flex-col h-56">
+        <div class="p-5">
           <h3 class="text-2xl font-semibold mb-2">Many's Pool & Bar</h3>
-          <p class="text-gray-300 flex-1">Bar con piscina en USA, opción de reservas online.</p>
-          <a href="https://www.manyspoolandbar.com/" class="mt-4 text-purple-400 hover:underline"><i class="fas fa-external-link-alt mr-1"></i>Visitar sitio</a>
+          <p class="text-gray-300">Bar y piscina con ambiente relajado y reservas en línea.</p>
+          <a href="https://www.manyspoolandbar.com/" class="mt-4 inline-block text-purple-400 hover:underline"><i class="fas fa-external-link-alt mr-1"></i>Visitar sitio</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contacto -->
-  <section id="contacto" class="max-w-3xl mx-auto px-6 py-20 animate-fade-in delay-1000">
-    <h2 class="text-4xl font-bold text-purple-500 mb-6"><i class="fas fa-envelope mr-2"></i>Contacto</h2>
-    <p class="text-gray-300">
-      ¿Querés trabajar conmigo o simplemente saludar? <br>
-      <i class="fas fa-phone-alt mr-2"></i> +504 1234-5678 <br>
-      <i class="fas fa-envelope mr-2"></i> edu@example.com
-    </p>
-  </section>
-
   <!-- Footer -->
-  <footer class="text-center py-8 text-gray-500 animate-slide-up delay-1200">
+  <footer class="text-center py-8 text-gray-500 fade">
     &copy; 2025 | <a href="http://5dward.xyz" class="text-purple-400 hover:underline">5dward.xyz</a>
   </footer>
 
+  <!-- Loader timeout -->
   <script>
-    // Loader hide
-    window.addEventListener('load', () => {
-      document.getElementById('loader').classList.add('opacity-0');
-      setTimeout(() => {
-        document.getElementById('loader').style.display = 'none';
-      }, 600);
-    });
+    setTimeout(() => {
+      const loader = document.getElementById('loader');
+      loader.style.opacity = '0';
+      setTimeout(() => loader.remove(), 600);
+    }, 3000); // 3 segundos fijos
   </script>
+
 </body>
 </html>
+
